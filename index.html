@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu blog</title>
+    <link rel="stylesheet" href="CSS/mainStyle.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">
+            Converse Aqui
+        </div>
+
+        <div class="nav-links">
+            <a href="#blog">Página Principal</a>
+            <a href="#perfil">Perfil</a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="blogArea" id="blog">
+            <div class="blogArea-msg" id="msgArea">
+            </div>
+
+            <div class="blogArea-textToDigit">
+                <div class="blogArea-textToDigit-textArea">
+                    <input type="text" id="textMsg" placeholder="Digite sua mensagem..." onfocus="inputFocus()" onblur="inputBlur()">
+                </div>
+                <div class="blogArea-textToDigit-sendBtn"  id="sendBtn">
+                    <button onclick="send(), inputBlur()">></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="perfil" id="perfil">
+            <div class="perfil-container">
+                <h2>Perfil</h2>
+                <div class="perfil-container-options">
+
+                    <div class="perfil-container-options-iten" style="width: 40%;">
+                        <label>
+                            Nome do Usuário: <br>
+                            <input type="text" id="nameInput" value="Usuário" onblur="savePerfilMod()">
+                        </label>
+                        <label>
+                            Foto do Usuário (url): <br>
+                            <input type="text" value="https://static.vecteezy.com/ti/vetor-gratis/p1/18765757-icone-de-perfil-de-usuario-em-estilo-simples-ilustracao-em-avatar-membro-no-fundo-isolado-conceito-de-negocio-de-sinal-de-permissao-humana-vetor.jpg" id = "imgInput" onblur="savePerfilMod()">
+                        </label>
+                    </div>
+
+                    <div class="perfil-container-options-iten" style="width: 40%;">
+                        <label>
+                            Cor Tema: <br>
+                            <input type="color">
+                        </label>
+                    </div>
+
+                    <div class="perfil-container-options-iten" style="width: 90%;">
+                        <label>
+                            Imagem de Fundo (url): <br>
+                            <input type="text">
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="JavaScript/mainScript.js"></script>
+</body>
+</html>
